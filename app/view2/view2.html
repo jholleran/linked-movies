@@ -1,0 +1,32 @@
+<div class="container">
+    <header>
+        <h3>New Translation</h3>
+    </header>
+    <div class="row">
+        <div class="span3">
+            Key:
+            <input data-ng-model="translation.key" type="text" placeholder="Key">
+        </div>
+        <div class="span3">
+            English:
+            <input data-ng-model="translation.english" type="text" placeholder="English">
+        </div>
+        <br />
+        <div class="span3">
+            <button id="submitTranslation" class="btn btn-primary" type="button" 
+                data-ng-disabled="!translation.key || !translation.english" 
+                data-ng-click="insertTranslation()">Add Translation</button>
+        </div>
+    </div>
+    <br /><br />
+        <div>
+            <div class="row cardContainer">
+                <div class="span3 card" data-ng-repeat="translation in translations | orderBy:'english'">
+                    <button class="btn close cardClose" data-ng-click="deleteCustomer(customer.id)">&times;</button>
+                    <div class="cardHeader">{{translation.key + ' ' + translation.english}}</div>
+                    <div class="cardBody">{{translation.city}}</div>
+                    <a href="#/customerorders/{{customer.id}}" class="cardBody btn-link">View {{ translation.orders.length }} Orders</a>
+                </div>
+            </div>
+        </div>
+</div>

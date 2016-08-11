@@ -1,0 +1,7 @@
+SELECT%20%3Fmovie%20%3Fname%0AWHERE%20%7B%0A%3Fmovie%20%3Chttp%3A%2F%2Fdata.linkedmdb.org%2Fresource%2Fmovie%2Fcountry%3E%20%3Chttp%3A%2F%2Fdata.linkedmdb.org%2Fresource%2Fcountry%2FIE%3E%20.%0A%3Fmovie%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23label%3E%20%3Fname%20.%0A%7D
+
+SELECT ?movie ?name
+WHERE {
+?movie <http://data.linkedmdb.org/resource/movie/country> <http://data.linkedmdb.org/resource/country/IE> .
+?movie <http://www.w3.org/2000/01/rdf-schema#label> ?name .
+}

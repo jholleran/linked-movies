@@ -1,0 +1,18 @@
+<div class="container" ng-controller="View1Ctrl">
+    <h3>List of Movies</h3>
+    <label>Search: <input ng-model="searchKeyword"></label>
+    <table class="table">
+        <tr>
+            <th>Movie
+            </th>
+            <th>Link
+            </th>
+        </tr>
+        <tr ng-repeat="movie in movies  | filter: searchKeyword ">
+            <td>{{movie.name.value}}
+            </td>
+            <td>{{movie.movie.value}}
+            </td>
+        </tr>
+    </table>
+</div>
